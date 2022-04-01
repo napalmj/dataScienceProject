@@ -2,7 +2,8 @@
 
 This is a django app backend using react as a frontend
 
-# Dev Notes Venv setup & Django lib (Note --> pip is required)
+# Getting Started
+### Dev Notes Venv setup & Django lib (Note --> pip is required)
 
 If venv is not installed already
 - `python3 -m pip install --user virtualenv`
@@ -18,7 +19,7 @@ Install django libs
 - `pip install djangorestframework`
 - `python -m pip install django-cors-headers`
 
-## General Dev Notes
+### General Dev Notes
 
 Build react application (client side)
 - `cd dataScienceApp/reactApp && yarn run build`
