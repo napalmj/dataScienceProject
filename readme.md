@@ -28,6 +28,13 @@ Install django libs
 
 ### General Dev Notes
 
+Description:
+- This project is build so that the django app targets the build files of the react app and will serve up those files. After programming has been done on the react side it will be necessary to `yarn run build`.
+- You will also need to make sure you have `nodejs` installed on your system. 
+
+Install Node_modules (These are necessary to run the react app)
+- `cd dataScienceApp/reactApp && yarn install`
+
 Build react application (client side)
 - `cd dataScienceApp/reactApp && yarn run build`
 
