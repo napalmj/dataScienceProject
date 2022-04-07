@@ -1,61 +1,19 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
-import {
-  LineChart,
-  ResponsiveContainer,
-  Legend,
-  Tooltip,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-} from "recharts";
 
-const Body = styled.body `
-  display: flex;
-  align-items: center;
-  margin: 1rem;
-  padding: 1rem;
+import LineAnalytics from "./component/LineAnalytics";
+import WorldMap from "./component/WorldMap";
+
+const Body = styled.div `
+  height: 100vh;
 `
-
-// Sample chart data
-const pdata = [
-  {
-    name: "MongoDb",
-    student: 11,
-    fees: 120,
-  },
-  {
-    name: "Javascript",
-    student: 15,
-    fees: 12,
-  },
-  {
-    name: "PHP",
-    student: 5,
-    fees: 10,
-  },
-  {
-    name: "Java",
-    student: 10,
-    fees: 5,
-  },
-  {
-    name: "C#",
-    student: 9,
-    fees: 4,
-  },
-  {
-    name: "C++",
-    student: 10,
-    fees: 8,
-  },
-];
-
+const Header = styled.h1 `
+  margin: 3rem 1rem;
+  display: flex;
+`
 function App() {
-  const [data, setData] = useState([]);
-
+/*
   useEffect(() => {
     (async () => {
       try {
@@ -67,23 +25,15 @@ function App() {
       }
     })();
   }, []);
-
-  console.log(data);
+*/
 
   return (
     <Body>
-      <h1 className="text-heading">Line Chart Using Rechart</h1>
-      <ResponsiveContainer width="100%" aspect={3}>
-        <LineChart data={pdata} margin={{ right: 300 }}>
-          <CartesianGrid />
-          <XAxis dataKey="name" interval={"preserveStartEnd"} />
-          <YAxis></YAxis>
-          <Legend />
-          <Tooltip />
-          <Line dataKey="student" stroke="black" activeDot={{ r: 8 }} />
-          <Line dataKey="fees" stroke="red" activeDot={{ r: 8 }} />
-        </LineChart>
-      </ResponsiveContainer>
+      <Header>
+        GDP Charts and Graphs for Data Science 479
+      </Header>
+      {/* <LineAnalytics /> */}
+      <WorldMap />
     </Body>
   );
 }
